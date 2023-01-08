@@ -2,12 +2,16 @@ package com.example.demo.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "endereco")
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class Endereco {
 
     @Id

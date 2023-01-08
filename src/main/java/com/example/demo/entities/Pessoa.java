@@ -2,14 +2,19 @@ package com.example.demo.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
 @Table(name = "pessoa")
 @NoArgsConstructor
+@Getter
+@Setter
 public class Pessoa {
 
     @Id
@@ -19,5 +24,5 @@ public class Pessoa {
     private Date dataNascimento;
 
     @OneToMany
-    private String endereco;
+    private List<Endereco> endereco;
 }
